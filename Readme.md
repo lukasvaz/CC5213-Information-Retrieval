@@ -7,8 +7,7 @@
 Para la tarea 1 debe crear dos programas:
 
   * `tarea1-indexar.py`
-     Recibe dos parám
-     etros por la línea de comandos:
+     Recibe dos parámetros por la línea de comandos:
 	    1. La carpeta de entrada con imágenes originales R.
         2. Una carpeta de salida donde guardar los descriptores de R.
    
