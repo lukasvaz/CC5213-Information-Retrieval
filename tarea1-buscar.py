@@ -21,6 +21,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     #        if not nombre.endswith(".jpg"):
     #            continue
     #        archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
+    
     #  2-leer descriptores de R de dir_input_descriptores_R
     #  3-para cada descriptor q localizar el mas cercano en R
     #  4-escribir en file_output_resultados haciendo print() con el formato: 
