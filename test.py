@@ -93,9 +93,3 @@ def imprimir_matriz_descriptores(nombres, descriptores):
             f.write("  {}) {:>15s} {}".format(i, nombres[i], descriptores[i]))
         print()
 
-imagenes_dir = "imgs"
-mostrar_imagenes = True
-nombres, descriptores = calcular_descriptores(vector_de_intensidades_omd, imagenes_dir)
-imprimir_matriz_descriptores(nombres, descriptores)
-# with open('./resultados/res1.txt','w') as f:
-#     f.write(descriptores)

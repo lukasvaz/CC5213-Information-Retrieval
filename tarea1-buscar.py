@@ -4,6 +4,9 @@
 
 import sys
 import os.path
+import scipy
+import numpy as np
+from test import vector_de_intensidades_omd
 
 def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_resultados):
     if not os.path.isdir(dir_input_imagenes_Q):
@@ -16,22 +19,40 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
         print("ERROR: ya existe archivo {}".format(file_output_resultados))
         sys.exit(1)
     # Implementar la tarea:
-    #  1-leer imágenes en dir_input_imagenes_Q y calcular descriptores cada imagen
-    #    for nombre in os.listdir(dir_input_imagenes_Q):
-    #        if not nombre.endswith(".jpg"):
-    #            continue
-    #        archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
     
+    #  1-leer imágenes en dir_input_imagenes_Q y calcular descriptores cada imagen
+    nombres_Q=[]
+    descriptores_Q=[]
+    for nombre in os.listdir(dir_input_imagenes_Q):
+        if not nombre.endswith(".jpg"):
+            continue
+        archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
+        nombres_Q.append(nombre)
+        descriptores_Q.append(vector_de_intensidades_omd(archivo_imagen))
+
     #  2-leer descriptores de R de dir_input_descriptores_R
+    nombres_R=[]
+    descriptores_R=[]
+    with open(os.path.join(dir_input_descriptores_R,"descriptores.data")) as f:
+        for line  in f:
+            line=line.strip("\n").split("\t")
+            nombres_R.append(line[0])
+            descriptores_R.append(np.array(line[1].strip("[]").split(),dtype='uint8'))
+   
     #  3-para cada descriptor q localizar el mas cercano en R
-    #  4-escribir en file_output_resultados haciendo print() con el formato: 
-    #    with open(file_output_resultados, 'w') as f:
-    #        for ....
-    #            print("{}\t{}\t{}".format(imagen_q, imagen_r, distancia), file=f)
-    # borrar la siguiente linea
-    print("ERROR: no implementado!")
-
-
+    distance_matrix=scipy.spatial.distance.cdist(descriptores_Q,descriptores_R, 'canberra')            
+    resultados=dict()
+    for q_i in range(distance_matrix.shape[0]):
+        distancia=distance_matrix[q_i].min()
+        index=np.where(distance_matrix[q_i]==distancia)[0][0]
+        resultados[nombres_Q[q_i]]=[nombres_R[index],distancia]        
+    
+    # 4-escribir en file_output_resultados haciendo print() con el formato: 
+    with open(file_output_resultados, 'w') as f:
+        for key in resultados.keys():
+            print("{}\t{}\t{}".format(key, resultados[key][0], resultados[key][1]), file=f)
+    
+    
 # inicio de la tarea
 if len(sys.argv) < 4:
     print("Uso: {} [dir_input_imagenes_Q] [dir_input_descriptores_R] [file_output_resultados]".format(sys.argv[0]))
