@@ -34,10 +34,14 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     nombres_R=[]
     descriptores_R=[]
     with open(os.path.join(dir_input_descriptores_R,"descriptores.data")) as f:
-        for line  in f:
-            line=line.strip("\n").split("\t")
-            nombres_R.append(line[0])
-            descriptores_R.append(np.array(line[1].strip("[]").split(),dtype='uint8'))
+        data_descriptor=""
+        while "]" not in  data_descriptor:
+            data_descriptor+=f.readline()
+        
+        line=data_descriptor.strip("\n").split("\t")
+        nombres_R.append(line[0])
+        # print("array",np.array(line[1].strip("[]").split(),dtype='uint'))
+        descriptores_R.append(np.array(line[1].strip("[]").split(),dtype='uint8'))
    
     #  3-para cada descriptor q localizar el mas cercano en R
     distance_matrix=scipy.spatial.distance.cdist(descriptores_Q,descriptores_R, 'canberra')            
