@@ -61,7 +61,7 @@ def vector_de_intensidades_equalize(archivo_imagen):
 
 def vector_de_intensidades_omd(archivo_imagen):
     imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
-    imagen_2 = cv2.resize(imagen_1, (4, 4), interpolation=cv2.INTER_AREA)
+    imagen_2 = cv2.resize(imagen_1, (15, 15), interpolation=cv2.INTER_AREA)
     descriptor_imagen = imagen_2.flatten()
     posiciones = numpy.argsort(descriptor_imagen)
     for i in range(len(posiciones)):
