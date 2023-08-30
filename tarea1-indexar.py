@@ -6,15 +6,7 @@ import sys
 import os.path
 import cv2
 import numpy
-
-def vector_de_intensidades_omd(archivo_imagen):
-    imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
-    imagen_2 = cv2.resize(imagen_1, (4, 4), interpolation=cv2.INTER_AREA)
-    descriptor_imagen = imagen_2.flatten()
-    posiciones = numpy.argsort(descriptor_imagen)
-    for i in range(len(posiciones)):
-        descriptor_imagen[posiciones[i]] = i
-    return descriptor_imagen
+from test import vector_de_intensidades_omd
 
 def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
     if not os.path.isdir(dir_input_imagenes_R):
