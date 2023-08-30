@@ -18,7 +18,6 @@ def get_filename(filepath):
         name = name[name.rfind('\\') + 1:]
     return name
 
-
 class GT:
     def __init__(self, imagen_q, tipo, imagen_r):
         self.imagen_q = imagen_q

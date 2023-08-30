@@ -6,7 +6,7 @@ import sys
 import os.path
 import scipy
 import numpy as np
-from test import vector_de_intensidades_omd
+from test import vector_de_intensidades_omd,vector_de_intensidades_equalize,angulos_por_zona
 
 def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_resultados):
     if not os.path.isdir(dir_input_imagenes_Q):
@@ -28,7 +28,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
             continue
         archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
         nombres_Q.append(nombre)
-        descriptores_Q.append(vector_de_intensidades_omd(archivo_imagen))
+        descriptores_Q.append(angulos_por_zona(archivo_imagen))
 
     #  2-leer descriptores de R de dir_input_descriptores_R
     nombres_R=[]
@@ -40,10 +40,10 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
             if "]" in descriptor_data:
                 descriptor_data=descriptor_data.strip("\n").split("\t")
                 nombres_R.append(descriptor_data[0])
-                descriptores_R.append(np.array(descriptor_data[1].strip("[]").split(),dtype='uint8'))
+                descriptores_R.append(np.array(descriptor_data[1].strip("[]").split(),dtype=float))
                 descriptor_data=""
     #  3-para cada descriptor q localizar el mas cercano en R
-    distance_matrix=scipy.spatial.distance.cdist(descriptores_Q,descriptores_R, 'canberra')            
+    distance_matrix=scipy.spatial.distance.cdist(descriptores_Q,descriptores_R, 'cityblock')            
     resultados=dict()
     for q_i in range(distance_matrix.shape[0]):
         distancia=distance_matrix[q_i].min()
