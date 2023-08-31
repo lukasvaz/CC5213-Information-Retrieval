@@ -6,7 +6,7 @@ import sys
 import os.path
 import scipy
 import numpy as np
-from test import vector_de_intensidades_omd,vector_de_intensidades_equalize,angulos_por_zona
+from test import histograma_por_zona,concat_features,vector_de_intensidades_omd,vector_de_intensidades_equalize,angulos_por_zona
 
 def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_resultados):
     if not os.path.isdir(dir_input_imagenes_Q):
@@ -28,7 +28,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
             continue
         archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
         nombres_Q.append(nombre)
-        descriptores_Q.append(angulos_por_zona(archivo_imagen))
+        descriptores_Q.append(concat_features(archivo_imagen))
 
     #  2-leer descriptores de R de dir_input_descriptores_R
     nombres_R=[]

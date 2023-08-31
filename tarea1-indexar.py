@@ -6,7 +6,7 @@ import sys
 import os.path
 import cv2
 import numpy
-from test import vector_de_intensidades_omd,vector_de_intensidades_equalize,angulos_por_zona
+from test import histograma_por_zona,concat_features,vector_de_intensidades_omd,vector_de_intensidades_equalize,angulos_por_zona
 
 def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
     if not os.path.isdir(dir_input_imagenes_R):
@@ -24,7 +24,7 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
         if not nombre.endswith(".jpg"):
             continue
         archivo_imagen = "{}/{}".format(dir_input_imagenes_R, nombre)
-        descriptores[nombre]=angulos_por_zona(archivo_imagen)
+        descriptores[nombre]=concat_features(archivo_imagen)
 
     #  3-escribir en dir_output_descriptores_R los descriptores calculados (crear uno o más archivos)
     os.makedirs(dir_output_descriptores_R, exist_ok=True)

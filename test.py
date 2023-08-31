@@ -2,6 +2,7 @@ import math
 import numpy
 import cv2
 
+
 def vector_de_intensidades_equalize(archivo_imagen):
     imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
     imagen_2 = cv2.equalizeHist(imagen_1)
@@ -18,28 +19,37 @@ def vector_de_intensidades_omd(archivo_imagen):
         descriptor_imagen[posiciones[i]] = i
     return descriptor_imagen
 
+def histograma_por_zona(archivo_imagen):
+    # divisiones
+    num_zonas_x = 4
+    num_zonas_y = 4
+    num_bins_por_zona = 9
+    ecualizar = True
+    # leer imagen
+    imagen = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+    if ecualizar:
+        imagen = cv2.equalizeHist(imagen)
+    # para dibujar los histogramas
+    global mostrar_imagenes
+    imagen_hists = numpy.full((imagen.shape[0], imagen.shape[1], 3), (200,255,200), dtype=numpy.uint8)
+    # procesar cada zona
+    descriptor = numpy.array([])
+    for j in range(num_zonas_y):
+        desde_y = int(imagen.shape[0] / num_zonas_y * j)
+        hasta_y = int(imagen.shape[0] / num_zonas_y * (j+1))
+        for i in range(num_zonas_x):
+            desde_x = int(imagen.shape[1] / num_zonas_x * i)
+            hasta_x = int(imagen.shape[1] / num_zonas_x * (i+1))
+            # recortar zona de la imagen
+            zona = imagen[desde_y : hasta_y, desde_x : hasta_x]
+            # histograma de los pixeles de la zona
+            histograma, limites = numpy.histogram(zona, bins=num_bins_por_zona, range=(0,255))
+            # normalizar histograma (bins suman 1)
+            histograma = histograma / numpy.sum(histograma)
+            # agregar descriptor de la zona al descriptor global
+            descriptor=numpy.append(descriptor,histograma)
+    return descriptor
 
-def angulos_en_zona(imgBordes, imgSobelX, imgSobelY):
-    # calcular angulos de la zona
-    # recorre pixel por pixel (muy lento!)
-    angulos = []
-    for row in range(imgBordes.shape[0]):
-        for col in range(imgBordes.shape[1]):
-            # si es un pixel de borde (magnitud del gradiente > umbral)
-            if imgBordes[row][col] > 0:
-                dx = imgSobelX[row][col]
-                dy = imgSobelY[row][col]
-                angulo = 90
-                if dx != 0:
-                    # un numero entre -180 y 180
-                    angulo = math.degrees(numpy.arctan(dy/dx))
-                    # dejar en el rango -90 a 90
-                    if angulo <= -90:
-                        angulo += 180
-                    if angulo > 90:
-                        angulo -= 180
-                angulos.append(angulo)
-    return angulos
 
 def angulos_en_zona2(imgBordes, imgSobelX, imgSobelY):
     sobelX=imgSobelX[imgBordes>0]
@@ -88,3 +98,12 @@ def angulos_por_zona(archivo_imagen):
         
     return descriptor
 
+def concat_features(archivo_imagen):
+    descriptor1=histograma_por_zona(archivo_imagen)
+    descriptor2=vector_de_intensidades_omd(archivo_imagen)
+    descriptor1=descriptor1*descriptor2.mean()/descriptor1.mean()
+    con= numpy.concatenate((descriptor2,descriptor1)) 
+    return con
+
+descriptor=concat_features("imgs/r0001.jpg")
+# print(descriptor)
