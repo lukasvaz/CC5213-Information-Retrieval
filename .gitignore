@@ -1,10 +1,12 @@
 #ignore data
-/datasets
-/datos_tarea1.zip
-/resultados
-/eval_t1
-results.txt
-/imgs
+tarea1/datasets
+tarea1/datos_tarea1.zip
+tarea1/resultados
+tarea1/eval_t1
+tarea1/results.txt
+tarea1/imgs
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

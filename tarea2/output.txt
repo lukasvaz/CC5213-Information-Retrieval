@@ -1,0 +1,370 @@
+CC5213 - Recuperación de Información Multimedia - Primavera 2023
+Evaluación Tarea 2
+borrando datos previos en eval_t2...
+
+------- dataset_a -------
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_a/canciones/ eval_t2/datos_dataset_a/descriptores_canciones/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_a/radio/ eval_t2/datos_dataset_a/descriptores_radio/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-busqueda.py eval_t2/datos_dataset_a/descriptores_radio/ eval_t2/datos_dataset_a/descriptores_canciones/ eval_t2/datos_dataset_a/busqueda/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-deteccion.py eval_t2/datos_dataset_a/busqueda/ eval_t2/resultado_dataset_a.txt
+tiempo ejecucion: 39.9 segundos
+
+Evaluando eval_t2/resultado_dataset_a.txt con datasets/dataset_a/gt.txt
+77 detecciones en archivo datasets/dataset_a/gt.txt
+67 detecciones en archivo eval_t2/resultado_dataset_a.txt
+Resultado detallado de cada una de las 67 detecciones:
+    OK) radio-disney-mx-7.m4a 256.3 34.9 vivialdi - invierno - allegro non molto (18).m4a 0.7746406642830252  //IoU=50.6% gt=(256.2 17.8)
+    OK) radio-disney-mx-7.m4a 346.0 36.7 erasure - a little respect (27).m4a 0.8116183263654173  //IoU=74.1% gt=(346.0 27.2)
+    --) radio-disney-mx-7.m4a 758.1 12.5 mala junta - chileno de corazon (27).m4a 0.7551532189817667 
+    OK) radio-disney-mx-7.m4a 777.9 14.2 carlos gardel - por una cabeza (14).m4a 0.9999999999999999  //IoU=98.6% gt=(777.8 14.4)
+    OK) radio-disney-mx-7.m4a 946.3 24.7 vivialdi - invierno - allegro non molto (18).m4a 0.9748998878458087  //IoU=71.4% gt=(946.2 17.8)
+    OK) radio-disney-mx-7.m4a 1089.2 59.7 barry white - never, never gonna give you up (33).m4a 0.9350357355856739  //IoU=54.7% gt=(1089.1 32.8)
+    --) radio-disney-mx-7.m4a 1250.5 6.6 erasure - a little respect (27).m4a 0.8765538485865758 
+    OK) radio-disney-mx-7.m4a 1409.7 14.6 angela carrasco - quererte a ti (15).m4a 0.9999999999999999  //IoU=98.6% gt=(1409.6 14.8)
+    OK) radio-disney-mx-7.m4a 1503.6 15.8 michael jackson - thriller (12).m4a 0.9043397839758945  //IoU=74.1% gt=(1503.2 12.4)
+    --) radio-disney-mx-7.m4a 1532.3 11.4 star wars - the imperial march (37).m4a 0.8953278616160728 
+    OK) radio-disney-mx-7.m4a 1647.2 36.4 star wars - the imperial march (37).m4a 0.9999999999999999  //IoU=99.5% gt=(1647.1 36.6)
+    --) radio-disney-mx-7.m4a 1736.4 10.4 star wars - the imperial march (37).m4a 0.8564827410754079 
+    OK) radio-disney-mx-7.m4a 1799.5 7.9 angela carrasco - quererte a ti (15).m4a 0.7789645354878253  //IoU=53.4% gt=(1797.6 14.8)
+    --) radio-disney-mx-7.m4a 1813.9 19.9 star wars - the imperial march (37).m4a 0.7993215118268404 
+    OK) radio-disney-mx-7.m4a 2059.2 17.4 vivialdi - invierno - allegro non molto (18).m4a 0.9978261409133968  //IoU=97.8% gt=(2059.1 17.8)
+    OK) radio-disney-mx-7.m4a 2616.5 35.4 los jaivas - sube a nacer conmigo hermano (36).m4a 0.9999999999999999  //IoU=99.7% gt=(2616.4 35.5)
+    OK) radio-disney-cl-7.m4a 134.2 58.5 mazapan - una cuncuna amarilla (42).m4a 0.9694860042729735  //IoU=72.0% gt=(147.2 42.1)
+    OK) radio-disney-cl-7.m4a 293.1 38.5 erasure - a little respect (27).m4a 0.7934622386759719  //IoU=68.0% gt=(292.5 27.2)
+    --) radio-disney-cl-7.m4a 337.4 15.3 star wars - the imperial march (37).m4a 0.8167011040800994 
+    --) radio-disney-cl-7.m4a 468.4 7.8 star wars - the imperial march (37).m4a 0.8166668297839057 
+    --) radio-disney-cl-7.m4a 507.9 10.1 mago de oz - la posada de los muertos (17).m4a 0.7910198359834689 
+    --) radio-disney-cl-7.m4a 568.6 11.0 mazapan - una cuncuna amarilla (42).m4a 0.9882631745208742 
+    OK) radio-disney-cl-7.m4a 580.0 14.5 venga boys - we like the party (14).m4a 0.9595213064215837  //IoU=95.9% gt=(579.9 14.1)
+    --) radio-disney-cl-7.m4a 632.2 10.2 los tres - la primera vez (34).m4a 0.8883005998448833 
+    OK) radio-disney-cl-7.m4a 694.9 18.1 barry white - never, never gonna give you up (33).m4a 0.9278851703547246  //IoU=55.2% gt=(694.0 32.8)
+    OK) radio-disney-cl-7.m4a 790.4 21.7 pink floyd -  another brick in the wall part 2 (12).m4a 0.9152458585585207  //IoU=56.9% gt=(790.3 12.5)
+    OK) radio-disney-cl-7.m4a 923.3 24.9 barry white - never, never gonna give you up (33).m4a 0.9134348184180314  //IoU=75.9% gt=(922.6 32.8)
+    --) radio-disney-cl-7.m4a 1000.4 8.6 angela carrasco - quererte a ti (15).m4a 0.9434919514559381 
+    --) radio-disney-cl-7.m4a 1059.7 5.6 mazapan - una cuncuna amarilla (42).m4a 0.9159599446550188 
+    OK) radio-disney-cl-7.m4a 1067.6 11.8 jose luis perales - un velero llamado libertad (23).m4a 0.9670044255097536  //IoU=50.9% gt=(1067.6 23.2)
+ dup--) radio-disney-cl-7.m4a 1080.0 10.8 jose luis perales - un velero llamado libertad (23).m4a 0.8858802837985592 
+    --) radio-disney-cl-7.m4a 1636.6 6.7 erasure - a little respect (27).m4a 0.8467320972458657 
+    OK) radio-disney-cl-7.m4a 1646.5 67.8 star wars - the imperial march (37).m4a 0.8053891371876297  //IoU=53.8% gt=(1646.4 36.6)
+    OK) radio-disney-cl-7.m4a 1788.6 14.1 depeche mode - personal jesus (11).m4a 0.9397529972166992  //IoU=76.1% gt=(1788.5 10.9)
+    OK) radio-disney-cl-7.m4a 2000.2 34.2 los jaivas - sube a nacer conmigo hermano (36).m4a 0.9350026004500445  //IoU=96.3% gt=(1998.9 35.5)
+    OK) radio-disney-cl-7.m4a 2095.8 9.1 bob marley - could you be loved (9).m4a 0.999379844981122  //IoU=97.8% gt=(2095.7 9.3)
+    --) radio-disney-cl-7.m4a 2182.5 13.1 carlos gardel - por una cabeza (14).m4a 0.8069533178649424 
+    OK) radio-disney-ar-7.m4a 74.6 14.2 carlos gardel - por una cabeza (14).m4a 0.9999999999999999  //IoU=98.6% gt=(74.5 14.4)
+    OK) radio-disney-ar-7.m4a 166.9 24.6 vivialdi - invierno - allegro non molto (18).m4a 0.867082752308197  //IoU=71.7% gt=(166.8 17.8)
+    OK) radio-disney-ar-7.m4a 353.0 69.1 mala junta - chileno de corazon (27).m4a 0.7702627353981779  //IoU=39.0% gt=(352.9 27.1)
+    OK) radio-disney-ar-7.m4a 542.8 35.5 los jaivas - sube a nacer conmigo hermano (36).m4a 0.9659151647081724  //IoU=100.0% gt=(542.8 35.5)
+    OK) radio-disney-ar-7.m4a 647.8 58.6 star wars - the imperial march (37).m4a 0.7689179009153839  //IoU=62.5% gt=(650.0 36.6)
+    OK) radio-disney-ar-7.m4a 764.6 17.1 mago de oz - la posada de los muertos (17).m4a 0.9999999999999999  //IoU=100.0% gt=(764.6 17.1)
+    OK) radio-disney-ar-7.m4a 861.4 15.2 pink floyd -  another brick in the wall part 2 (12).m4a 0.8750553930079749  //IoU=72.0% gt=(860.5 12.5)
+    --) radio-disney-ar-7.m4a 1000.7 17.3 mazapan - una cuncuna amarilla (42).m4a 0.9739590574191063 
+    OK) radio-disney-ar-7.m4a 1038.6 14.0 carlos gardel - por una cabeza (14).m4a 0.9382855830977134  //IoU=97.2% gt=(1038.2 14.4)
+    OK) radio-disney-ar-7.m4a 1124.2 14.1 vivialdi - invierno - allegro non molto (18).m4a 0.9943176987755669  //IoU=79.2% gt=(1122.9 17.8)
+    OK) radio-disney-ar-7.m4a 1532.6 35.4 los jaivas - sube a nacer conmigo hermano (36).m4a 0.9941624208540942  //IoU=99.7% gt=(1532.5 35.5)
+    --) radio-disney-ar-7.m4a 1726.9 13.9 star wars - the imperial march (37).m4a 0.9122821293118041 
+    --) radio-disney-ar-7.m4a 1743.4 14.0 star wars - the imperial march (37).m4a 0.9630367613892866 
+    OK) radio-disney-ar-7.m4a 2030.2 51.3 los tres - la primera vez (34).m4a 0.7899039097173123  //IoU=60.2% gt=(2028.0 34.4)
+    OK) radio-disney-ar-7.m4a 2137.1 17.6 venga boys - we like the party (14).m4a 0.766509835435589  //IoU=79.1% gt=(2137.0 14.1)
+    OK) radio-disney-ar-7.m4a 2315.6 26.6 mala junta - chileno de corazon (27).m4a 0.9660781668388903  //IoU=98.2% gt=(2315.5 27.1)
+    OK) radio-disney-br-7.m4a 123.7 18.1 michael jackson - thriller (12).m4a 0.9791339418128663  //IoU=67.6% gt=(123.6 12.4)
+    OK) radio-disney-br-7.m4a 406.3 49.3 star wars - the imperial march (37).m4a 0.9935207895214663  //IoU=73.9% gt=(406.2 36.6)
+    --) radio-disney-br-7.m4a 526.9 16.8 barry white - never, never gonna give you up (33).m4a 0.7615428327284809 
+    OK) radio-disney-br-7.m4a 653.4 42.6 los tres - la primera vez (34).m4a 0.8264737264479451  //IoU=71.9% gt=(651.2 34.4)
+    OK) radio-disney-br-7.m4a 1007.7 36.4 venga boys - we like the party (14).m4a 0.8305619652828707  //IoU=38.4% gt=(1007.6 14.1)
+    OK) radio-disney-br-7.m4a 1157.4 37.8 barry white - never, never gonna give you up (33).m4a 0.9616538694277967  //IoU=86.8% gt=(1157.4 32.8)
+    --) radio-disney-br-7.m4a 1537.9 15.7 michael jackson - thriller (12).m4a 0.8526884736935821 
+    OK) radio-disney-br-7.m4a 1627.8 35.2 chemical brothers - hey girls hey boys (30).m4a 0.871379216492465  //IoU=80.8% gt=(1627.0 29.9)
+    OK) radio-disney-br-7.m4a 1778.1 38.1 los tres - la primera vez (34).m4a 0.9373224043581057  //IoU=90.3% gt=(1778.1 34.4)
+    OK) radio-disney-br-7.m4a 1925.7 31.8 chemical brothers - hey girls hey boys (30).m4a 0.9039841588793317  //IoU=93.4% gt=(1925.6 29.9)
+    --) radio-disney-br-7.m4a 2068.1 13.1 mazapan - una cuncuna amarilla (42).m4a 0.7710776597528592 
+    OK) radio-disney-br-7.m4a 2200.0 48.0 los jaivas - sube a nacer conmigo hermano (36).m4a 0.9625910818850107  //IoU=73.6% gt=(2199.9 35.5)
+    --) radio-disney-br-7.m4a 2344.8 7.4 chemical brothers - hey girls hey boys (30).m4a 0.8420498935492127 
+    OK) radio-disney-br-7.m4a 2488.5 75.9 star wars - the imperial march (37).m4a 0.8279576730962647  //IoU=48.0% gt=(2488.4 36.6)
+
+Resultado global:
+ 77 detecciones en GT, 67 detecciones a evaluar
+ Al usar umbral=0.766509835435589 se seleccionan 65 detecciones:
+    45 detecciones correctas, 20 detecciones incorrectas
+    Precision=0.692 (45/65)  Recall=0.584 (45/77)
+    F1=0.634  IoU=76.7%  ->  F1-IOU=0.661
+
+Resultado por transformacion:
+    IGUAL    =  11 correctas (65%)
+    BAJO     =  13 correctas (81%)
+    ALTO     =  11 correctas (69%)
+    MIXED    =   5 correctas (33%)
+    COMPRESS =   5 correctas (38%)
+
+------- dataset_b -------
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_b/canciones/ eval_t2/datos_dataset_b/descriptores_canciones/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_b/radio/ eval_t2/datos_dataset_b/descriptores_radio/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-busqueda.py eval_t2/datos_dataset_b/descriptores_radio/ eval_t2/datos_dataset_b/descriptores_canciones/ eval_t2/datos_dataset_b/busqueda/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-deteccion.py eval_t2/datos_dataset_b/busqueda/ eval_t2/resultado_dataset_b.txt
+tiempo ejecucion: 36.9 segundos
+
+Evaluando eval_t2/resultado_dataset_b.txt con datasets/dataset_b/gt.txt
+74 detecciones en archivo datasets/dataset_b/gt.txt
+60 detecciones en archivo eval_t2/resultado_dataset_b.txt
+Resultado detallado de cada una de las 60 detecciones:
+    OK) radio-disney-br-6.m4a 100.8 65.8 los bunkers - ven aqui (38).m4a 0.7927427667391141  //IoU=57.1% gt=(100.8 37.6)
+    OK) radio-disney-br-6.m4a 262.8 42.9 vivialdi - invierno - allegro non molto (24).m4a 0.8485218249017407  //IoU=54.2% gt=(262.5 23.7)
+    OK) radio-disney-br-6.m4a 464.1 25.3 silvio rodriguez - playa giron (20).m4a 0.963750312410714  //IoU=77.6% gt=(464.0 19.8)
+    OK) radio-disney-br-6.m4a 799.8 17.3 silvio rodriguez - playa giron (20).m4a 0.867603684697154  //IoU=87.4% gt=(797.4 19.8)
+    --) radio-disney-br-6.m4a 861.8 24.7 b.b. king - three oclock blues (16).m4a 0.7771991512285189 
+    OK) radio-disney-br-6.m4a 1337.7 59.5 camilo sesto - jamas (46).m4a 0.765776606114944  //IoU=41.5% gt=(1322.9 45.6)
+    OK) radio-disney-br-6.m4a 1646.5 40.7 little richard - tutti frutti (33).m4a 0.9710314360113458  //IoU=79.9% gt=(1646.4 32.7)
+    --) radio-disney-br-6.m4a 1687.4 37.5 camilo sesto - jamas (46).m4a 0.7623039605031143 
+    --) radio-disney-br-6.m4a 1745.2 18.6 los jaivas - mira ninita (20).m4a 0.813146404375582 
+    OK) radio-disney-br-6.m4a 1780.0 76.7 camilo sesto - jamas (46).m4a 0.7825844481876227  //IoU=59.0% gt=(1779.8 45.6)
+    OK) radio-disney-br-6.m4a 1951.1 14.8 combo tortuga - soy feo pero rico (15).m4a 0.9949566128968833  //IoU=98.0% gt=(1950.9 15.1)
+    OK) radio-disney-br-6.m4a 2053.7 13.4 bob marley - could you be loved (20).m4a 0.8381221476836163  //IoU=49.3% gt=(2044.6 20.2)
+    OK) radio-disney-br-6.m4a 2295.4 21.2 b.b. king - three oclock blues (16).m4a 0.9567578271895636  //IoU=77.4% gt=(2295.4 16.4)
+    --) radio-disney-br-6.m4a 2439.9 9.6 camilo sesto - jamas (46).m4a 0.7680618006011469 
+    OK) radio-disney-br-6.m4a 2647.4 35.4 metallica - master of puppets (20).m4a 0.926365429432864  //IoU=55.5% gt=(2647.3 19.8)
+    OK) radio-disney-ar-6.m4a 579.6 28.9 metallica - master of puppets (20).m4a 0.7900817982600091  //IoU=35.7% gt=(572.6 19.8)
+    OK) radio-disney-ar-6.m4a 849.5 6.3 emmanuel - toda la vida (7).m4a 0.9923897583658348  //IoU=90.0% gt=(848.9 7.0)
+    OK) radio-disney-ar-6.m4a 1015.3 52.9 el general - muevelo (37).m4a 0.9472280614260545  //IoU=69.8% gt=(1015.3 36.9)
+    OK) radio-disney-ar-6.m4a 1142.6 18.0 chancho en piedra - sinfonia de cuna (17).m4a 0.9868866454898982  //IoU=92.2% gt=(1142.6 16.6)
+    OK) radio-disney-ar-6.m4a 1388.1 15.4 b.b. king - three oclock blues (16).m4a 0.9649442306719002  //IoU=93.9% gt=(1387.2 16.4)
+    OK) radio-disney-ar-6.m4a 1573.2 18.4 metallica - master of puppets (20).m4a 0.934938129393503  //IoU=92.9% gt=(1571.9 19.8)
+    OK) radio-disney-ar-6.m4a 1787.9 43.3 little richard - tutti frutti (33).m4a 0.9221299846878065  //IoU=75.1% gt=(1787.8 32.7)
+    OK) radio-disney-ar-6.m4a 2298.7 48.4 vivialdi - invierno - allegro non molto (24).m4a 0.932562914175928  //IoU=48.7% gt=(2298.6 23.7)
+    OK) radio-disney-ar-6.m4a 2456.0 14.9 combo tortuga - soy feo pero rico (15).m4a 0.9918561612169091  //IoU=98.7% gt=(2455.9 15.1)
+    OK) radio-disney-ar-6.m4a 2629.8 8.8 green day - basket case (9).m4a 0.9729094269990841  //IoU=97.8% gt=(2629.6 9.0)
+    OK) radio-disney-mx-6.m4a 168.6 19.5 metallica - master of puppets (20).m4a 0.947753480285917  //IoU=97.5% gt=(168.2 19.8)
+    --) radio-disney-mx-6.m4a 188.5 9.1 green day - basket case (9).m4a 0.7883551771257405 
+    OK) radio-disney-mx-6.m4a 319.8 49.3 little richard - tutti frutti (33).m4a 0.8653479652248461  //IoU=66.0% gt=(319.7 32.7)
+    OK) radio-disney-mx-6.m4a 485.4 23.5 vivialdi - invierno - allegro non molto (24).m4a 0.9999999999999999  //IoU=99.2% gt=(485.3 23.7)
+    OK) radio-disney-mx-6.m4a 608.2 6.5 la cripta - el gato volador (19).m4a 0.9868367544806587  //IoU=34.4% gt=(595.8 18.9)
+    OK) radio-disney-mx-6.m4a 860.2 59.7 mala junta - chileno de corazon (28).m4a 0.7946002042788856  //IoU=45.8% gt=(860.1 27.5)
+    OK) radio-disney-mx-6.m4a 1099.7 22.7 the beatles - can't buy me love (19).m4a 0.8883911371407055  //IoU=82.0% gt=(1099.6 18.8)
+    --) radio-disney-mx-6.m4a 1351.0 10.0 mala junta - chileno de corazon (28).m4a 0.8506893070132687 
+    OK) radio-disney-mx-6.m4a 1363.1 40.2 combo tortuga - soy feo pero rico (15).m4a 0.7920730771016029  //IoU=37.2% gt=(1363.0 15.1)
+    OK) radio-disney-mx-6.m4a 1467.3 18.1 la cripta - el gato volador (19).m4a 0.9975411803245633  //IoU=95.8% gt=(1466.6 18.9)
+    OK) radio-disney-mx-6.m4a 1654.4 21.8 chancho en piedra - sinfonia de cuna (17).m4a 0.9874344677899298  //IoU=76.1% gt=(1654.4 16.6)
+    OK) radio-disney-mx-6.m4a 2079.2 20.0 bob marley - could you be loved (20).m4a 0.9999999999999999  //IoU=99.0% gt=(2079.1 20.2)
+    --) radio-disney-mx-6.m4a 2164.1 7.7 los bunkers - ven aqui (38).m4a 0.8636060945191097 
+    OK) radio-disney-mx-6.m4a 2172.2 31.9 combo tortuga - soy feo pero rico (15).m4a 0.7782756750054749  //IoU=46.9% gt=(2172.1 15.1)
+    OK) radio-disney-mx-6.m4a 2363.8 21.2 los jaivas - mira ninita (20).m4a 0.988732280942931  //IoU=91.1% gt=(2363.7 19.5)
+    OK) radio-disney-mx-6.m4a 2495.7 15.8 camilo sesto - jamas (46).m4a 0.950726114947511  //IoU=34.6% gt=(2490.9 45.6)
+    OK) radio-disney-mx-6.m4a 2631.1 38.1 little richard - tutti frutti (33).m4a 0.9275856895739883  //IoU=85.3% gt=(2631.0 32.7)
+    OK) radio-disney-cl-6.m4a 278.0 34.9 combo tortuga - soy feo pero rico (15).m4a 0.7718447262584867  //IoU=43.3% gt=(282.5 15.1)
+    OK) radio-disney-cl-6.m4a 445.2 46.2 los bunkers - ven aqui (38).m4a 0.9179437012422548  //IoU=81.4% gt=(445.2 37.6)
+    --) radio-disney-cl-6.m4a 551.1 9.5 metallica - master of puppets (20).m4a 0.8432105934986756 
+    OK) radio-disney-cl-6.m4a 562.3 15.1 chemical brothers - hey girls hey boys (15).m4a 0.8867053694824338  //IoU=98.7% gt=(562.2 15.3)
+    OK) radio-disney-cl-6.m4a 788.0 19.2 depeche mode - personal jesus (19).m4a 0.9999999999999999  //IoU=100.0% gt=(788.0 19.2)
+    OK) radio-disney-cl-6.m4a 900.7 27.5 bob marley - could you be loved (20).m4a 0.8102888671084286  //IoU=72.2% gt=(900.5 20.2)
+    OK) radio-disney-cl-6.m4a 1066.6 32.6 little richard - tutti frutti (33).m4a 0.9971644847360627  //IoU=99.7% gt=(1066.6 32.7)
+    OK) radio-disney-cl-6.m4a 1211.5 41.5 mala junta - chileno de corazon (28).m4a 0.862099212977871  //IoU=65.5% gt=(1211.3 27.5)
+    OK) radio-disney-cl-6.m4a 1338.3 22.7 b.b. king - three oclock blues (16).m4a 0.7988051301383575  //IoU=65.7% gt=(1337.4 16.4)
+    --) radio-disney-cl-6.m4a 1555.4 13.6 la cripta - el gato volador (19).m4a 0.760474175120292 
+    --) radio-disney-cl-6.m4a 1578.3 5.5 the platters - twilight time (17).m4a 0.9226056723233442 
+    OK) radio-disney-cl-6.m4a 1641.6 23.6 depeche mode - personal jesus (19).m4a 0.8267295939211897  //IoU=79.1% gt=(1641.3 19.2)
+    --) radio-disney-cl-6.m4a 1821.5 8.5 mala junta - chileno de corazon (28).m4a 0.8101424089564787 
+    OK) radio-disney-cl-6.m4a 1839.1 65.3 little richard - tutti frutti (33).m4a 0.8677826651145257  //IoU=50.1% gt=(1839.1 32.7)
+    --) radio-disney-cl-6.m4a 2223.4 18.2 the platters - twilight time (17).m4a 0.7584801146614568 
+    OK) radio-disney-cl-6.m4a 2270.4 19.6 silvio rodriguez - playa giron (20).m4a 0.9999999999999999  //IoU=99.0% gt=(2270.3 19.8)
+    OK) radio-disney-cl-6.m4a 2385.1 27.1 vivialdi - invierno - allegro non molto (24).m4a 0.9222451138716079  //IoU=85.4% gt=(2384.8 23.7)
+    OK) radio-disney-cl-6.m4a 2572.6 27.5 depeche mode - personal jesus (19).m4a 0.8750607389365268  //IoU=69.8% gt=(2572.6 19.2)
+
+Resultado global:
+ 74 detecciones en GT, 60 detecciones a evaluar
+ Al usar umbral=0.765776606114944 se seleccionan 57 detecciones:
+    48 detecciones correctas, 9 detecciones incorrectas
+    Precision=0.842 (48/57)  Recall=0.649 (48/74)
+    F1=0.733  IoU=73.6%  ->  F1-IOU=0.733
+
+Resultado por transformacion:
+    IGUAL    =  12 correctas (75%)
+    BAJO     =  11 correctas (69%)
+    ALTO     =  14 correctas (88%)
+    MIXED    =   7 correctas (54%)
+    COMPRESS =   4 correctas (31%)
+
+------- dataset_c -------
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_c/canciones/ eval_t2/datos_dataset_c/descriptores_canciones/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_c/radio/ eval_t2/datos_dataset_c/descriptores_radio/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-busqueda.py eval_t2/datos_dataset_c/descriptores_radio/ eval_t2/datos_dataset_c/descriptores_canciones/ eval_t2/datos_dataset_c/busqueda/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-deteccion.py eval_t2/datos_dataset_c/busqueda/ eval_t2/resultado_dataset_c.txt
+tiempo ejecucion: 43.0 segundos
+
+Evaluando eval_t2/resultado_dataset_c.txt con datasets/dataset_c/gt.txt
+72 detecciones en archivo datasets/dataset_c/gt.txt
+72 detecciones en archivo eval_t2/resultado_dataset_c.txt
+Resultado detallado de cada una de las 72 detecciones:
+    --) radio-disney-br-5.m4a 49.4 12.7 pimpinela - olvidame y pega la vuelta (34).m4a 0.8312623809550899 
+    OK) radio-disney-br-5.m4a 120.8 43.6 iron maiden - run to the hills (42).m4a 0.9990126085015473  //IoU=97.0% gt=(120.7 42.5)
+    OK) radio-disney-br-5.m4a 318.4 27.1 cachureos - a mover el pollo (36).m4a 0.9897802887906113  //IoU=75.3% gt=(317.9 36.0)
+    OK) radio-disney-br-5.m4a 453.1 27.7 michael jackson - thriller (19).m4a 0.9163181921560233  //IoU=68.6% gt=(453.1 19.0)
+    OK) radio-disney-br-5.m4a 539.9 48.1 shakira - suerte (36).m4a 0.82609832332088  //IoU=70.4% gt=(538.4 36.4)
+    OK) radio-disney-br-5.m4a 741.8 30.3 paul anka - diana (23).m4a 0.9080078498028706  //IoU=75.0% gt=(741.7 22.9)
+    --) radio-disney-br-5.m4a 991.8 14.7 bill halley - rock around the clock (36).m4a 0.9469262058164393 
+    OK) radio-disney-br-5.m4a 1056.0 22.1 patricio manns - arriba en la cordillera (18).m4a 0.980020301921981  //IoU=80.2% gt=(1055.9 17.9)
+    --) radio-disney-br-5.m4a 1115.7 8.7 reel 2 real - i like to move it (19).m4a 0.9141955154920629 
+    --) radio-disney-br-5.m4a 1230.5 8.1 daddy yankee - gasolina (27).m4a 0.9643498761651641 
+    --) radio-disney-br-5.m4a 1366.7 8.4 bill halley - rock around the clock (36).m4a 0.7585011960289216 
+    OK) radio-disney-br-5.m4a 1566.2 19.6 shakira - suerte (36).m4a 0.8694204542661702  //IoU=53.8% gt=(1565.8 36.4)
+ dup--) radio-disney-br-5.m4a 1590.1 11.3 shakira - suerte (36).m4a 0.8485820132205575 
+    --) radio-disney-br-5.m4a 1798.9 16.7 daddy yankee - gasolina (27).m4a 0.8963710871715623 
+    OK) radio-disney-br-5.m4a 1873.6 55.6 shakira - suerte (36).m4a 0.8042536948733521  //IoU=64.0% gt=(1873.1 36.4)
+    OK) radio-disney-br-5.m4a 2081.0 47.1 cachureos - a mover el pollo (36).m4a 0.7967798140306981  //IoU=76.4% gt=(2081.0 36.0)
+    OK) radio-disney-br-5.m4a 2495.6 23.6 jose luis rodriguez - pavo real (22).m4a 0.9918660476637122  //IoU=92.4% gt=(2495.6 21.8)
+    OK) radio-disney-br-5.m4a 2613.7 26.0 shakira - suerte (36).m4a 0.8656473713783785  //IoU=40.5% gt=(2595.3 36.4)
+    --) radio-disney-cl-5.m4a 6.4 12.6 michael sembello - maniac (42).m4a 0.8700054074986912 
+    OK) radio-disney-cl-5.m4a 245.1 17.4 shakira - suerte (36).m4a 0.924758129257434  //IoU=47.8% gt=(244.7 36.4)
+    OK) radio-disney-cl-5.m4a 408.4 32.6 kiss - detroit rock city (28).m4a 0.9512871000972403  //IoU=85.0% gt=(408.4 27.7)
+    --) radio-disney-cl-5.m4a 444.3 10.2 reel 2 real - i like to move it (19).m4a 0.8023426375461662 
+    --) radio-disney-cl-5.m4a 487.9 8.7 patricio manns - arriba en la cordillera (18).m4a 0.7604180536973382 
+    OK) radio-disney-cl-5.m4a 616.5 18.2 vivialdi - invierno - allegro non molto (39).m4a 0.9788285393367091  //IoU=47.2% gt=(613.7 38.6)
+    --) radio-disney-cl-5.m4a 639.7 6.2 reel 2 real - i like to move it (19).m4a 0.846473865301059 
+    OK) radio-disney-cl-5.m4a 866.4 27.2 edith piaf - non je ne regrette rien (27).m4a 0.9998466657469615  //IoU=99.6% gt=(866.4 27.3)
+    OK) radio-disney-cl-5.m4a 1061.6 11.9 kiss - detroit rock city (28).m4a 0.8172714172450257  //IoU=43.0% gt=(1061.3 27.7)
+ dup--) radio-disney-cl-5.m4a 1074.7 19.0 kiss - detroit rock city (28).m4a 0.8002881035050395 
+    OK) radio-disney-cl-5.m4a 1158.1 85.5 the champs - tequila  (34).m4a 0.7551227100220481  //IoU=37.8% gt=(1157.2 33.6)
+    OK) radio-disney-cl-5.m4a 1456.0 9.9 jose luis rodriguez - pavo real (22).m4a 0.9815632159382873  //IoU=45.4% gt=(1455.8 21.8)
+    OK) radio-disney-cl-5.m4a 1555.6 26.6 daddy yankee - gasolina (27).m4a 0.9992752404155942  //IoU=99.6% gt=(1555.5 26.7)
+    OK) radio-disney-cl-5.m4a 1652.0 28.9 reel 2 real - i like to move it (19).m4a 0.814474679709333  //IoU=63.4% gt=(1651.7 18.8)
+    --) radio-disney-cl-5.m4a 1818.5 5.0 daddy yankee - gasolina (27).m4a 0.8523407136983754 
+    OK) radio-disney-cl-5.m4a 2172.8 44.4 daddy yankee - gasolina (27).m4a 0.8025605562683639  //IoU=58.7% gt=(2172.4 26.7)
+    OK) radio-disney-cl-5.m4a 2263.4 31.3 31 minutos - bailan sin cesar (17).m4a 0.8647063710221387  //IoU=53.8% gt=(2263.3 17.0)
+    --) radio-disney-cl-5.m4a 2311.6 25.2 edith piaf - non je ne regrette rien (27).m4a 0.7828284645032736 
+    OK) radio-disney-cl-5.m4a 2415.2 63.2 the champs - tequila  (34).m4a 0.8138439758684196  //IoU=52.7% gt=(2415.0 33.6)
+    OK) radio-disney-cl-5.m4a 2584.0 56.5 edith piaf - non je ne regrette rien (27).m4a 0.9566614959118207  //IoU=48.3% gt=(2584.0 27.3)
+    OK) radio-disney-ar-5.m4a 76.6 23.9 patricio manns - arriba en la cordillera (18).m4a 0.8125959278049077  //IoU=74.2% gt=(76.5 17.9)
+    OK) radio-disney-ar-5.m4a 184.4 51.9 vivialdi - invierno - allegro non molto (39).m4a 0.9826903211408848  //IoU=74.0% gt=(184.3 38.6)
+    OK) radio-disney-ar-5.m4a 310.5 42.5 kiss - detroit rock city (28).m4a 0.9471541918536834  //IoU=65.2% gt=(310.5 27.7)
+    OK) radio-disney-ar-5.m4a 447.3 18.1 edith piaf - non je ne regrette rien (27).m4a 0.8854877544902652  //IoU=61.0% gt=(437.2 27.3)
+    OK) radio-disney-ar-5.m4a 541.5 59.1 daddy yankee - gasolina (27).m4a 0.7581228580598746  //IoU=44.2% gt=(541.1 26.7)
+    OK) radio-disney-ar-5.m4a 852.1 17.3 shakira - suerte (36).m4a 0.9042800672886392  //IoU=47.5% gt=(851.6 36.4)
+ dup--) radio-disney-ar-5.m4a 870.0 27.8 shakira - suerte (36).m4a 0.7842655342418856 
+    --) radio-disney-ar-5.m4a 930.1 26.1 iron maiden - run to the hills (42).m4a 0.7621129266552795 
+    OK) radio-disney-ar-5.m4a 992.4 12.6 van halen - jump (13).m4a 0.9963893064176723  //IoU=97.7% gt=(992.1 12.9)
+    OK) radio-disney-ar-5.m4a 1116.3 36.1 shakira - suerte (36).m4a 0.9681346041353919  //IoU=99.2% gt=(1116.1 36.4)
+    OK) radio-disney-ar-5.m4a 1285.4 21.0 iron maiden - run to the hills (42).m4a 0.9435110725215233  //IoU=49.4% gt=(1282.4 42.5)
+    OK) radio-disney-ar-5.m4a 1582.3 60.1 shakira - suerte (36).m4a 0.7787493309625471  //IoU=59.2% gt=(1581.8 36.4)
+    OK) radio-disney-ar-5.m4a 1793.4 59.3 shakira - suerte (36).m4a 0.7925773295980469  //IoU=55.6% gt=(1791.2 36.4)
+    --) radio-disney-ar-5.m4a 2042.2 24.1 michael sembello - maniac (42).m4a 0.96476408249905 
+    --) radio-disney-ar-5.m4a 2066.6 9.0 patricio manns - arriba en la cordillera (18).m4a 0.8033176176539184 
+    OK) radio-disney-ar-5.m4a 2141.5 70.6 daddy yankee - gasolina (27).m4a 0.761168560670925  //IoU=37.8% gt=(2141.5 26.7)
+    OK) radio-disney-ar-5.m4a 2383.4 37.4 pimpinela - olvidame y pega la vuelta (34).m4a 0.9975145514703121  //IoU=90.6% gt=(2383.4 33.9)
+    --) radio-disney-ar-5.m4a 2438.6 5.8 iron maiden - run to the hills (42).m4a 0.9824345285145336 
+    OK) radio-disney-ar-5.m4a 2502.4 15.0 reel 2 real - i like to move it (19).m4a 0.8698729773254773  //IoU=79.8% gt=(2498.6 18.8)
+    OK) radio-disney-mx-5.m4a 78.4 54.5 vivialdi - invierno - allegro non molto (39).m4a 0.9215935119421675  //IoU=70.5% gt=(78.3 38.6)
+    --) radio-disney-mx-5.m4a 181.0 12.5 bill halley - rock around the clock (36).m4a 0.9066872012905582 
+    --) radio-disney-mx-5.m4a 347.9 31.6 cachureos - a mover el pollo (36).m4a 0.7791960648362121 
+    --) radio-disney-mx-5.m4a 702.9 7.9 shakira - suerte (36).m4a 0.7783880026741308 
+    OK) radio-disney-mx-5.m4a 763.8 17.7 patricio manns - arriba en la cordillera (18).m4a 0.990278192112618  //IoU=98.9% gt=(763.7 17.9)
+    --) radio-disney-mx-5.m4a 857.7 15.1 shakira - suerte (36).m4a 0.8088842500588609 
+    OK) radio-disney-mx-5.m4a 873.6 71.1 michael sembello - maniac (42).m4a 0.8694975002114523  //IoU=58.6% gt=(873.5 41.8)
+    --) radio-disney-mx-5.m4a 944.8 5.7 patricio manns - arriba en la cordillera (18).m4a 0.8063275660690928 
+    OK) radio-disney-mx-5.m4a 1183.6 38.4 vivialdi - invierno - allegro non molto (39).m4a 0.999961220455134  //IoU=99.5% gt=(1183.5 38.6)
+    OK) radio-disney-mx-5.m4a 1439.9 21.6 jose luis rodriguez - pavo real (22).m4a 0.9596187635035832  //IoU=99.1% gt=(1439.7 21.8)
+    OK) radio-disney-mx-5.m4a 1575.1 23.3 patricio manns - arriba en la cordillera (18).m4a 0.9742760766825787  //IoU=76.1% gt=(1575.0 17.9)
+    OK) radio-disney-mx-5.m4a 1743.7 26.5 daddy yankee - gasolina (27).m4a 0.9825488011876055  //IoU=99.3% gt=(1743.6 26.7)
+    OK) radio-disney-mx-5.m4a 1948.5 39.7 pimpinela - olvidame y pega la vuelta (34).m4a 0.9948073361285669  //IoU=85.4% gt=(1948.5 33.9)
+    OK) radio-disney-mx-5.m4a 2249.2 9.9 jose luis rodriguez - pavo real (22).m4a 0.9815091538303918  //IoU=45.4% gt=(2249.0 21.8)
+    OK) radio-disney-mx-5.m4a 2511.9 27.1 edith piaf - non je ne regrette rien (27).m4a 0.9887075679649762  //IoU=99.3% gt=(2511.8 27.3)
+
+Resultado global:
+ 72 detecciones en GT, 72 detecciones a evaluar
+ Al usar umbral=0.7925773295980469 se seleccionan 61 detecciones:
+    44 detecciones correctas, 17 detecciones incorrectas
+    Precision=0.721 (44/61)  Recall=0.611 (44/72)
+    F1=0.662  IoU=71.9%  ->  F1-IOU=0.673
+
+Resultado por transformacion:
+    IGUAL    =   9 correctas (56%)
+    BAJO     =  12 correctas (75%)
+    ALTO     =   8 correctas (57%)
+    MIXED    =   7 correctas (54%)
+    COMPRESS =   8 correctas (62%)
+
+------- dataset_d -------
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_d/canciones/ eval_t2/datos_dataset_d/descriptores_canciones/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-extractor.py datasets/dataset_d/radio/ eval_t2/datos_dataset_d/descriptores_radio/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-busqueda.py eval_t2/datos_dataset_d/descriptores_radio/ eval_t2/datos_dataset_d/descriptores_canciones/ eval_t2/datos_dataset_d/busqueda/
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3 tarea2-deteccion.py eval_t2/datos_dataset_d/busqueda/ eval_t2/resultado_dataset_d.txt
+tiempo ejecucion: 42.2 segundos
+
+Evaluando eval_t2/resultado_dataset_d.txt con datasets/dataset_d/gt.txt
+72 detecciones en archivo datasets/dataset_d/gt.txt
+51 detecciones en archivo eval_t2/resultado_dataset_d.txt
+Resultado detallado de cada una de las 51 detecciones:
+    OK) radio-disney-mx-3.m4a 167.4 50.7 la cripta - el gato volador (32).m4a 0.891756628643924  //IoU=63.9% gt=(167.4 32.4)
+    OK) radio-disney-mx-3.m4a 303.1 57.2 strauss - en las orillas del danubio azul (38).m4a 0.9592123962186562  //IoU=66.0% gt=(303.0 37.9)
+    --) radio-disney-mx-3.m4a 415.4 15.3 the doors - break on through (23).m4a 0.9858696134446419 
+    OK) radio-disney-mx-3.m4a 441.5 37.7 michael jackson - thriller (33).m4a 0.9573146518128588  //IoU=88.1% gt=(441.5 33.2)
+    OK) radio-disney-mx-3.m4a 737.1 49.5 paul anka - diana (34).m4a 0.8665207041965893  //IoU=66.6% gt=(736.3 34.3)
+    OK) radio-disney-mx-3.m4a 936.0 43.0 ilegales - taqui taqui (24).m4a 0.9316662020632765  //IoU=55.8% gt=(936.0 24.0)
+    OK) radio-disney-mx-3.m4a 1024.9 15.5 oscar arriagada - el twist del esqueleto (16).m4a 0.9648255590598211  //IoU=98.7% gt=(1024.8 15.7)
+    OK) radio-disney-mx-3.m4a 1105.6 36.6 el guaton loyola (26).m4a 0.912065338454706  //IoU=70.5% gt=(1105.6 25.8)
+    OK) radio-disney-mx-3.m4a 1244.9 7.8 ilegales - taqui taqui (24).m4a 0.7912183689091159  //IoU=32.5% gt=(1229.4 24.0)
+    OK) radio-disney-mx-3.m4a 1525.1 91.5 paul anka - diana (34).m4a 0.8975836728232264  //IoU=37.5% gt=(1525.1 34.3)
+    --) radio-disney-mx-3.m4a 1616.8 13.7 motley crue - dr feelgood (16).m4a 0.7755978531872513 
+    OK) radio-disney-mx-3.m4a 1818.9 13.1 daft punk - around the world (13).m4a 0.9071382935246054  //IoU=99.2% gt=(1818.8 13.2)
+    OK) radio-disney-mx-3.m4a 2206.6 64.4 the doors - break on through (23).m4a 0.8222212145631314  //IoU=35.8% gt=(2206.5 23.2)
+    OK) radio-disney-mx-3.m4a 2299.1 86.9 paul anka - diana (34).m4a 0.8115139912634467  //IoU=39.3% gt=(2299.0 34.3)
+    OK) radio-disney-mx-3.m4a 2599.0 18.3 ilegales - taqui taqui (24).m4a 0.8035304686894206  //IoU=41.5% gt=(2587.4 24.0)
+    --) radio-disney-cl-3.m4a 402.1 5.8 metallica - enter sandman (20).m4a 0.9726142363914507 
+    OK) radio-disney-cl-3.m4a 426.8 13.1 daft punk - around the world (13).m4a 0.9323122721852782  //IoU=99.2% gt=(426.7 13.2)
+    --) radio-disney-cl-3.m4a 580.7 23.5 motley crue - dr feelgood (16).m4a 0.7698101049927646 
+    OK) radio-disney-cl-3.m4a 1062.5 15.5 oscar arriagada - el twist del esqueleto (16).m4a 0.965398447612646  //IoU=98.7% gt=(1062.4 15.7)
+    OK) radio-disney-cl-3.m4a 1471.9 17.8 congreso - hijo del sol luminoso (42).m4a 0.9244261931197872  //IoU=42.7% gt=(1470.7 41.7)
+    OK) radio-disney-cl-3.m4a 1845.3 40.6 bob marley - could you be loved (26).m4a 0.8121144118416128  //IoU=63.4% gt=(1845.2 25.9)
+    OK) radio-disney-cl-3.m4a 2012.6 97.2 el guaton loyola (26).m4a 0.8094206606083845  //IoU=26.5% gt=(2012.6 25.8)
+    OK) radio-disney-cl-3.m4a 2125.2 15.5 tchakabum - danza da maozinha (32).m4a 0.8808262962521057  //IoU=48.4% gt=(2124.8 32.0)
+    --) radio-disney-cl-3.m4a 2250.3 30.1 celia cruz - la vida es un carnaval (29).m4a 0.753036457711194 
+    --) radio-disney-cl-3.m4a 2281.7 22.4 tchakabum - danza da maozinha (32).m4a 0.7797313755651504 
+    OK) radio-disney-cl-3.m4a 2455.9 17.5 daft punk - around the world (13).m4a 0.9443405415277739  //IoU=74.4% gt=(2455.8 13.2)
+    --) radio-disney-cl-3.m4a 2513.7 14.9 congreso - hijo del sol luminoso (42).m4a 0.9956901646933438 
+    OK) radio-disney-ar-3.m4a 235.1 15.5 oscar arriagada - el twist del esqueleto (16).m4a 0.960754244221796  //IoU=98.7% gt=(235.0 15.7)
+    OK) radio-disney-ar-3.m4a 318.5 64.2 congreso - hijo del sol luminoso (42).m4a 0.7765169198185607  //IoU=64.7% gt=(318.4 41.7)
+    OK) radio-disney-ar-3.m4a 459.1 25.8 el guaton loyola (26).m4a 0.9699682208161536  //IoU=100.0% gt=(459.1 25.8)
+    OK) radio-disney-ar-3.m4a 813.7 13.0 daft punk - around the world (13).m4a 0.9916911461002162  //IoU=98.5% gt=(813.6 13.2)
+    --) radio-disney-ar-3.m4a 918.8 13.0 los jaivas - mira ninita (31).m4a 0.8548074719992722 
+    OK) radio-disney-ar-3.m4a 994.2 53.6 ilegales - taqui taqui (24).m4a 0.7797841122597882  //IoU=43.7% gt=(993.8 24.0)
+    OK) radio-disney-ar-3.m4a 1174.8 15.7 oscar arriagada - el twist del esqueleto (16).m4a 0.9571879378531131  //IoU=100.0% gt=(1174.8 15.7)
+    --) radio-disney-ar-3.m4a 1197.7 17.3 strauss - en las orillas del danubio azul (38).m4a 0.8831438728460765 
+    OK) radio-disney-ar-3.m4a 1559.2 40.6 michael jackson - billie jean (41).m4a 0.9939718466231509  //IoU=99.5% gt=(1559.1 40.8)
+    OK) radio-disney-ar-3.m4a 1684.8 23.6 ilegales - taqui taqui (24).m4a 0.8948774524096514  //IoU=98.3% gt=(1684.5 24.0)
+    OK) radio-disney-ar-3.m4a 1831.6 53.1 bob marley - could you be loved (26).m4a 0.8199474055528743  //IoU=48.8% gt=(1831.6 25.9)
+    OK) radio-disney-ar-3.m4a 1928.2 19.6 el guaton loyola (26).m4a 0.9903022484955382  //IoU=76.0% gt=(1922.0 25.8)
+    OK) radio-disney-ar-3.m4a 2062.2 22.3 ilegales - taqui taqui (24).m4a 0.83810183582282  //IoU=92.9% gt=(2060.9 24.0)
+    OK) radio-disney-ar-3.m4a 2360.7 23.5 ilegales - taqui taqui (24).m4a 0.9197097438218886  //IoU=97.9% gt=(2360.3 24.0)
+    OK) radio-disney-ar-3.m4a 2476.7 15.4 motley crue - dr feelgood (16).m4a 0.993707758244803  //IoU=98.1% gt=(2476.4 15.7)
+    OK) radio-disney-br-3.m4a 83.2 28.7 ilegales - taqui taqui (24).m4a 0.9896295243575498  //IoU=83.6% gt=(83.2 24.0)
+    OK) radio-disney-br-3.m4a 329.6 28.8 el guaton loyola (26).m4a 0.9814259725435673  //IoU=89.6% gt=(329.6 25.8)
+    OK) radio-disney-br-3.m4a 637.7 43.1 michael jackson - thriller (33).m4a 0.9366211340819321  //IoU=72.6% gt=(636.6 33.2)
+    OK) radio-disney-br-3.m4a 1363.6 32.8 paul anka - diana (34).m4a 0.9788572158285263  //IoU=95.6% gt=(1362.7 34.3)
+    OK) radio-disney-br-3.m4a 1730.8 29.3 celia cruz - la vida es un carnaval (29).m4a 0.995491521674201  //IoU=100.0% gt=(1730.8 29.3)
+    OK) radio-disney-br-3.m4a 1868.1 15.5 oscar arriagada - el twist del esqueleto (16).m4a 0.9733003703676184  //IoU=98.7% gt=(1868.0 15.7)
+    OK) radio-disney-br-3.m4a 2020.2 13.0 daft punk - around the world (13).m4a 0.9177528297973977  //IoU=98.5% gt=(2020.1 13.2)
+    OK) radio-disney-br-3.m4a 2346.5 28.1 bob marley - could you be loved (26).m4a 0.8819355321814961  //IoU=85.6% gt=(2345.5 25.9)
+    OK) radio-disney-br-3.m4a 2453.6 49.2 paul anka - diana (34).m4a 0.9288705623298769  //IoU=69.7% gt=(2453.6 34.3)
+
+Resultado global:
+ 72 detecciones en GT, 51 detecciones a evaluar
+ Al usar umbral=0.7765169198185607 se seleccionan 48 detecciones:
+    42 detecciones correctas, 6 detecciones incorrectas
+    Precision=0.875 (42/48)  Recall=0.583 (42/72)
+    F1=0.700  IoU=75.2%  ->  F1-IOU=0.710
+
+Resultado por transformacion:
+    IGUAL    =  10 correctas (62%)
+    BAJO     =  10 correctas (62%)
+    ALTO     =  11 correctas (79%)
+    MIXED    =   6 correctas (43%)
+    COMPRESS =   5 correctas (42%)
+
+--------------------------------------------
+Resumen:
+    F1-IOU-score en dataset_a: 0.661   (tiempo=39.9 segundos)
+    F1-IOU-score en dataset_b: 0.733   (tiempo=36.9 segundos)
+    F1-IOU-score en dataset_c: 0.673   (tiempo=43.0 segundos)
+    F1-IOU-score en dataset_d: 0.710   (tiempo=42.2 segundos)
+    ==> Promedio: 0.694
+
+    Criterio: Para obtener nota 4.0 se requiere F1-IOU 0.200
+              Para obtener nota 7.0 se requiere F1-IOU 0.900
+
+    ==> Nota tarea 2 = 6.1

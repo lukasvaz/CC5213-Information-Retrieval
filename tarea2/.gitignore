@@ -1,0 +1,20 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Visual Studio Code
+.vscode/
+
+datasets
+descriptores_canciones
+descriptores_radio
+eval_t2
+hola
+resultados_knn
+resultados_finales
+Tarea2.pdf
