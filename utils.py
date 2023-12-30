@@ -29,8 +29,8 @@ def histograma_por_zona(archivo_imagen):
     imagen = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
     if ecualizar:
         imagen = cv2.equalizeHist(imagen)
-    # para dibujar los histogramas
-    global mostrar_imagenes
+    
+    
     imagen_hists = numpy.full((imagen.shape[0], imagen.shape[1], 3), (200,255,200), dtype=numpy.uint8)
     # procesar cada zona
     descriptor = numpy.array([])
@@ -51,22 +51,22 @@ def histograma_por_zona(archivo_imagen):
     return descriptor
 
 
-def angulos_en_zona2(imgBordes, imgSobelX, imgSobelY):
+def angulos_en_zona(imgBordes, imgSobelX, imgSobelY):
     sobelX=imgSobelX[imgBordes>0]
     sobelY=imgSobelY[imgBordes>0]
     degrees=numpy.degrees(numpy.arctan(numpy.divide(sobelY,sobelX,where=sobelX!=0))) 
     return degrees 
 
 def angulos_por_zona(archivo_imagen):
-    # divisiones
+    # no mostró resultados relevantes, su mejor desempeño  
+    # fue con GAMMA, sin embargo otros descritpores se desempeñaron mejor  
+    
     num_zonas_x = 4
     num_zonas_y = 4
     num_bins_por_zona = 9
     threshold_magnitud_gradiente = 150
-    # leer imagen
     imagen = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
 
-    # calcular filtro de sobel (usar cv2.GaussianBlur para borrar ruido)
     imagen = cv2.equalizeHist(imagen)
     imagen = cv2.GaussianBlur(imagen, (5,5), 0, 0)
     sobelX = cv2.Sobel(imagen, ddepth=cv2.CV_32F, dx=1, dy=0, ksize=3)
@@ -75,7 +75,6 @@ def angulos_por_zona(archivo_imagen):
     th, bordes = cv2.threshold(magnitud, threshold_magnitud_gradiente, 255, cv2.THRESH_BINARY)
     imagen_hists = numpy.full((imagen.shape[0], imagen.shape[1], 3), (200,210,255), dtype=numpy.uint8)
 
-    # procesar cada zona
     descriptor = numpy.array([])
 
     for j in range(num_zonas_y):
@@ -84,16 +83,12 @@ def angulos_por_zona(archivo_imagen):
         for i in range(num_zonas_x):
             desde_x = int(imagen.shape[1] / num_zonas_x * i)
             hasta_x = int(imagen.shape[1] / num_zonas_x * (i+1))
-            # calcular angulos de la zona
-            angulos = angulos_en_zona2(bordes[desde_y : hasta_y, desde_x : hasta_x],
+            angulos = angulos_en_zona(bordes[desde_y : hasta_y, desde_x : hasta_x],
                                       sobelX[desde_y : hasta_y, desde_x : hasta_x],
                                       sobelY[desde_y : hasta_y, desde_x : hasta_x])
-            # histograma de los angulos de la zona
             histograma, limites = numpy.histogram(angulos, bins=num_bins_por_zona, range=(-90,90))
-            # normalizar histograma (bins suman 1)
             if numpy.sum(histograma) != 0:
                 histograma = histograma / numpy.sum(histograma)
-            # agregar descriptor de la zona al descriptor global
             descriptor=numpy.append(descriptor,histograma)   
         
     return descriptor
@@ -104,6 +99,3 @@ def concat_features(archivo_imagen):
     descriptor1=descriptor1*descriptor2.mean()/descriptor1.mean()
     con= numpy.concatenate((descriptor2,descriptor1)) 
     return con
-
-descriptor=concat_features("imgs/r0001.jpg")
-# print(descriptor)

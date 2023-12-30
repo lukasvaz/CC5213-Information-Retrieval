@@ -1,0 +1,99 @@
+CC5213 - Recuperación de Información Multimedia - Primavera 2023
+Evaluación Tarea 1
+borrando datos previos en eval_t1...
+
+------- dataset_a -------
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3.10 tarea1-indexar.py datasets/dataset_a/r eval_t1/datos_dataset_a_r
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3.10 tarea1-buscar.py datasets/dataset_a/q eval_t1/datos_dataset_a_r eval_t1/resultado_dataset_a.txt
+tiempo ejecucion: 81.3 segundos
+
+---------
+Evaluando eval_t1/resultado_dataset_a.txt con datasets/dataset_a/gt.txt
+4347 detecciones en eval_t1/resultado_dataset_a.txt
+
+Resultado general en dataset_a:
+  De 3726 casos, 2329 se detectaron correctamente (63%)
+      QUALITY     = 596 correctas (96%)
+      CROP        = 285 correctas (46%)
+      GAMMA       = 580 correctas (93%)
+      FLIP        =  88 correctas (14%)
+      PERSPECTIVE = 241 correctas (39%)
+      FRAMED      = 539 correctas (87%)
+
+  Las 5 respuestas incorrectas de menor distancia:
+     q0777.jpg  r0636.jpg       10809.45146049471       (según GT es -)
+     q3704.jpg  r3397.jpg       11505.722860847683      (según GT es r3494.jpg) (tipo=CROP)
+     q0387.jpg  r2579.jpg       12606.43040852422       (según GT es r0372.jpg) (tipo=GAMMA)
+     q3866.jpg  r1195.jpg       12688.840051297364      (según GT es r1701.jpg) (tipo=CROP)
+     q4091.jpg  r2341.jpg       13100.458640760551      (según GT es r2400.jpg) (tipo=PERSPECTIVE)
+
+  Mejor F1-score con umbral 18307.633
+    respuestas=2391 correctas=1976 incorrectas=415
+    precision=0.826  recall=0.530  F1=0.646
+
+------- dataset_b -------
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3.10 tarea1-indexar.py datasets/dataset_b/r eval_t1/datos_dataset_b_r
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3.10 tarea1-buscar.py datasets/dataset_b/q eval_t1/datos_dataset_b_r eval_t1/resultado_dataset_b.txt
+tiempo ejecucion: 82.4 segundos
+
+---------
+Evaluando eval_t1/resultado_dataset_b.txt con datasets/dataset_b/gt.txt
+4347 detecciones en eval_t1/resultado_dataset_b.txt
+
+Resultado general en dataset_b:
+  De 3726 casos, 2299 se detectaron correctamente (62%)
+      QUALITY     = 605 correctas (97%)
+      CROP        = 282 correctas (45%)
+      GAMMA       = 569 correctas (92%)
+      FLIP        =  69 correctas (11%)
+      PERSPECTIVE = 243 correctas (39%)
+      FRAMED      = 531 correctas (86%)
+
+  Las 5 respuestas incorrectas de menor distancia:
+     q1136.jpg  r3238.jpg       9422.181985792575       (según GT es r1509.jpg) (tipo=CROP)
+     q3629.jpg  r2003.jpg       9571.560363612693       (según GT es r1990.jpg) (tipo=PERSPECTIVE)
+     q2216.jpg  r2888.jpg       9878.857490819219       (según GT es r3260.jpg) (tipo=CROP)
+     q2667.jpg  r3238.jpg       10522.338399639732      (según GT es -)
+     q2534.jpg  r0695.jpg       11368.044913390975      (según GT es -)
+
+  Mejor F1-score con umbral 18130.935
+    respuestas=2342 correctas=1958 incorrectas=384
+    precision=0.836  recall=0.525  F1=0.645
+
+------- dataset_c -------
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3.10 tarea1-indexar.py datasets/dataset_c/r eval_t1/datos_dataset_c_r
+/home/lukas/Escritorio/RecMultimedia/rec_multimedia_venv/bin/python3.10 tarea1-buscar.py datasets/dataset_c/q eval_t1/datos_dataset_c_r eval_t1/resultado_dataset_c.txt
+tiempo ejecucion: 79.8 segundos
+
+---------
+Evaluando eval_t1/resultado_dataset_c.txt con datasets/dataset_c/gt.txt
+4347 detecciones en eval_t1/resultado_dataset_c.txt
+
+Resultado general en dataset_c:
+  De 3726 casos, 2331 se detectaron correctamente (63%)
+      QUALITY     = 606 correctas (98%)
+      CROP        = 280 correctas (45%)
+      GAMMA       = 566 correctas (91%)
+      FLIP        =  90 correctas (14%)
+      PERSPECTIVE = 236 correctas (38%)
+      FRAMED      = 553 correctas (89%)
+
+  Las 5 respuestas incorrectas de menor distancia:
+     q3268.jpg  r1984.jpg       7809.739003844862       (según GT es r2791.jpg) (tipo=FLIP)
+     q0634.jpg  r0052.jpg       10479.389686040242      (según GT es r0582.jpg) (tipo=FLIP)
+     q1018.jpg  r3243.jpg       10683.347280042539      (según GT es r0182.jpg) (tipo=FLIP)
+     q0802.jpg  r2665.jpg       10881.211529703649      (según GT es r3005.jpg) (tipo=FLIP)
+     q0751.jpg  r3626.jpg       11748.25646205315       (según GT es r1984.jpg) (tipo=QUALITY)
+
+  Mejor F1-score con umbral 18208.673
+    respuestas=2365 correctas=1963 incorrectas=402
+    precision=0.830  recall=0.527  F1=0.645
+
+--------------------------------------------
+Resumen:
+    F1-score en dataset_a: 0.646   (tiempo=81.3 segundos)
+    F1-score en dataset_b: 0.645   (tiempo=82.4 segundos)
+    F1-score en dataset_c: 0.645   (tiempo=79.8 segundos)
+    ==> Promedio F1-score: 0.645
+
+    ==> Nota tarea 1 = 6.3
